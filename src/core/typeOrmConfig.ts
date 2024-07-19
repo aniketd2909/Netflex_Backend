@@ -27,8 +27,8 @@ export const AppDataSource = new DataSource({
       await connection.synchronize();
       console.log("Table created.");
     }
-
     await queryRunner.release();
+    console.log("database connection estalished");
   } catch (error) {
     console.error("Error during Data Source initialization", error);
   }
